@@ -1,4 +1,4 @@
-![Logistic   Linear Regression (1500 x 500 px) (1)](https://github.com/user-attachments/assets/9b09c207-a6ca-4dcd-aff4-a145bb6c80f7)
+
 
 # 🔰Introduction
 
