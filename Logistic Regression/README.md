@@ -57,7 +57,7 @@ dataset
 ```
 ![image](https://github.com/user-attachments/assets/c3b0c646-561a-4a8a-9137-4b27ba828dd4)
 
-Thwn, display the dataset again to check if there's still features who have 0 values on them.
+Then, display the dataset again to check if there's still features who have 0 values on them.
 ```python
 dataset.describe()
 ```
@@ -197,8 +197,64 @@ accuracy_score(y_test,y_pred)
 ```
 <img src="https://github.com/user-attachments/assets/50861402-27b8-44a5-8e8f-74db1c299e19" width="150" height="25">
 
+### Other Model
+This is to compare Logistic Regression Model to other model.
+```python
+from sklearn.ensemble import RandomForestClassifier
+model = RandomForestClassifier(n_estimators=200, max_depth=5, max_features='sqrt', random_state=40)
+```
+```python
+model.fit(X_train, y_train)
+```
+![image](https://github.com/user-attachments/assets/f2a45d1b-4560-4524-8c9a-a7964d11da3f)
+
+```python
+y_train_predict = model.predict(X_train)
+```
+```python
+y_test_predict = model.predict(X_test)
+```
+```python
+from sklearn.metrics import classification_report
+# Classification Report for Train Set
+print("=================================================================================================")
+print("Classification Report for Random Forest Model (Train Set):")
+print(classification_report(y_train, y_train_predict))
+
+# Classification Report for Test Set
+print("=================================================================================================")
+print("Classification Report for Random Forest Model (Test Set):")
+print(classification_report(y_test, y_test_predict))
+```
+![image](https://github.com/user-attachments/assets/e7c712a8-7022-49bd-8249-f41ca5b1b3da)
+
+```python
+from sklearn.metrics import confusion_matrix
+confusion_matrix(y_train, y_train_predict)
+```
+<img src="https://github.com/user-attachments/assets/6486e123-89ce-4db2-9b73-c2ebd4f6bbd7" width="150" height="35">
+
+```python
+import seaborn as sns
+cmR =  confusion_matrix(y_train, y_train_predict)
+sns.heatmap(cmR, annot = True)
+```
+![image](https://github.com/user-attachments/assets/55ec3423-95ee-4b7e-b96d-edf751b53859)
+
+```python
+from sklearn.metrics import accuracy_score
+accuracy_score(y_train,y_train_predict)
+```
+<img src="https://github.com/user-attachments/assets/bd4d17ae-f4f5-4742-9ea6-67f953025b80" width="150" height="25">
 
 # Conclusion
 
-The recorded accuracy for the Logistic Regression model is 82.75%, indicating that this model is fairly reliable for predicting whether an individual has diabetes using the Pima Indians Diabetes Dataset. However, there are other models that achieve higher accuracy than the Logistic Regression model, with some reaching over 90%. These include the Bagging Decision Tree model, Random Forest, Support Vector Machine (SVM), Gaussian Naive Bayes, and others. Additional data cleaning and imputation could improve accuracy, though excessive cleaning lowered the Logistic Regression model’s performance in this case. As a result, I opted to replace only the zero values in certain features, as it’s unlikely for such values to be valid given the dataset’s features. 
+The recorded accuracy for the Logistic Regression model is 82.75%, indicating that this model is fairly reliable for predicting whether an individual has diabetes using the Pima Indians Diabetes Dataset. However, there are other models that achieve higher accuracy than the Logistic Regression model like the Random Tree Model which has an accuracy score of 85.27%. While some others reaching over 90%. These include the Bagging Decision Tree model, Support Vector Machine (SVM), Gaussian Naive Bayes, and others. Additional data cleaning and imputation could improve accuracy, though excessive cleaning lowered the Logistic Regression model’s performance in this case. As a result, I opted to replace only the zero values in certain features, as it’s unlikely for such values to be valid given the dataset’s features. 
 
+[Here](https://github.com/Bang2018/Lecture-Notes---ML-DL/blob/main/Ensemble%20PIMA%20Dataset%200.92%20Accuracy.ipynb), is the compilation of all the models used in this dataset compiled by SPARSH ANALYTICS.
+![image](https://github.com/user-attachments/assets/3922a244-13a2-49b6-b8dc-16affcf8b505)
+
+# References
+**Huge credits to:** 
+* [Engr. Mikko De Torres](https://github.com/MikkoDT)
+* [SPARSH ANALYTICS](https://github.com/Bang2018)
