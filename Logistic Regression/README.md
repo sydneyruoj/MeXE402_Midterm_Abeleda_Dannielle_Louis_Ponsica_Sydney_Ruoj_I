@@ -74,7 +74,7 @@ y = dataset["Outcome"]
 
 Then, display the X and y values.
 ```python
-x
+X
 ```
 ![image](https://github.com/user-attachments/assets/ca08b9c9-91ff-4f93-af99-149e26564dc2)
 
