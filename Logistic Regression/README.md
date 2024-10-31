@@ -1,11 +1,11 @@
-# Logistic Regression of Pima Indians Diabetes
+# ✨Logistic Regression of Pima Indians Diabetes✨
 The **Pima Indians Diabetes Database** project aims to analyze factors contributing to diabetes onset in women of Pima Indian heritage. The dataset includes medical data such as glucose levels, BMI, insulin, age, and pregnancy history. The objective is to use this data to build predictive models, such as logistic regression, to classify patients as diabetic or non-diabetic based on these attributes, providing insights into the role of various health indicators in the likelihood of developing diabetes.
 
 For more details, visit [here](https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database/data).
 
-## Part I - Data Processing
+## 🔄Part I - Data Processing
 
-### Importing the Dataset
+### 📥Importing the Dataset
 Import the library needed and the dataset.
 ```python
 import pandas as pd
@@ -44,7 +44,7 @@ dataset.columns
 ```
 <img src="https://github.com/user-attachments/assets/a5d78238-1cdf-4ca4-bdef-7b9a04f264de" width="600" height="65">
 
-### Data Cleaning
+### 📶Data Cleaning
 Most of the features have 0 values which seems impossible in real life. That is why data cleaning is performed. Here, replace zeros with the mean of each column where zero is implausible.
 
 ```python
@@ -63,7 +63,7 @@ dataset.describe()
 ```
 ![image](https://github.com/user-attachments/assets/1a777edb-3ea7-4339-b756-947bd490c2ad)
 
-### Getting the Inputs and Output
+### 🔃Getting the Inputs and Output
 
 Assign for the Inputs and Output values. Inputs being all the features aside from the Outcome, and Outcome as the Output value.
 
@@ -83,7 +83,7 @@ y
 ```
 <img src="https://github.com/user-attachments/assets/7d222b0d-73ba-4eff-b938-ea29d720ec1f" width="300" height="200">
 
-### Creating the Training Set and the Test Set
+### 🚴Creating the Training Set and the Test Set
 
 Here, I used the ratio of 85-15 for the Train Test Split. 
 ```python
@@ -111,7 +111,7 @@ y_test
 ```
 <img src="https://github.com/user-attachments/assets/378cd00e-6747-424b-82ff-f996ca32ed22" width="300" height="200">
 
-### Feature Scaling
+### 📐Feature Scaling
 ```python
 from sklearn.preprocessing import StandardScaler
 sc = StandardScaler()
@@ -122,20 +122,20 @@ X_train
 ```
 <img src="https://github.com/user-attachments/assets/378cd00e-6747-424b-82ff-f996ca32ed22" width="300" height="200">
 
-## Part 2 - Building and Training the Model
-### Building the Model
+## 🔛Part 2 - Building and Training the Model
+### 🔨Building the Model
 ```python
 from sklearn.linear_model import LogisticRegression
 model = LogisticRegression(random_state = 0)
 ```
 
-### Training the Model
+### 🏊Training the Model
 ```python
 model.fit(X_train, y_train)
 ```
 <img src="https://github.com/user-attachments/assets/ef83801d-81fa-4712-b266-d0193625e10f" width="200" height="50">
 
-### Inference
+### 🔍Inference
 ```python
 y_pred = model.predict(sc.transform(X_test))
 y_pred
@@ -158,8 +158,8 @@ model.predict(sc.transform([[10,130,70,70,80,25,1,21]]))
 ```
 <img src="https://github.com/user-attachments/assets/15e0afd4-2dd3-4498-8ec3-eb42d5b90329" width="80" height="25">
 
-## Part 3: Evaluating the Model
-### Confusion Matrix
+## 📝Part 3: Evaluating the Model
+### 🔢Confusion Matrix
 ```python
 from sklearn.metrics import confusion_matrix
 confusion_matrix(y_test, y_pred)
@@ -184,7 +184,7 @@ classification_report(y_test, y_pred)
 ```
 <img src="https://github.com/user-attachments/assets/0094883e-fc8c-489b-a5ee-89d06fc35639" width="350" height="150">
 
-### Accuracy
+### 💯Accuracy
 This is to check the accuracy score of using this model.
 ```python
 (71+25)/(71+25+7+13)
@@ -197,7 +197,7 @@ accuracy_score(y_test,y_pred)
 ```
 <img src="https://github.com/user-attachments/assets/50861402-27b8-44a5-8e8f-74db1c299e19" width="150" height="25">
 
-### Other Model
+### 🧩Other Model
 This is to compare Logistic Regression Model to other model.
 ```python
 from sklearn.ensemble import RandomForestClassifier
@@ -247,14 +247,14 @@ accuracy_score(y_train,y_train_predict)
 ```
 <img src="https://github.com/user-attachments/assets/bd4d17ae-f4f5-4742-9ea6-67f953025b80" width="150" height="25">
 
-# Conclusion
+# 💡Conclusion
 
 The recorded accuracy for the Logistic Regression model is 82.75%, indicating that this model is fairly reliable for predicting whether an individual has diabetes using the Pima Indians Diabetes Dataset. However, there are other models that achieve higher accuracy than the Logistic Regression model like the Random Tree Model which has an accuracy score of 85.27%. While some others reaching over 90%. These include the Bagging Decision Tree model, Support Vector Machine (SVM), Gaussian Naive Bayes, and others. Additional data cleaning and imputation could improve accuracy, though excessive cleaning lowered the Logistic Regression model’s performance in this case. As a result, I opted to replace only the zero values in certain features, as it’s unlikely for such values to be valid given the dataset’s features. 
 
 [Here](https://github.com/Bang2018/Lecture-Notes---ML-DL/blob/main/Ensemble%20PIMA%20Dataset%200.92%20Accuracy.ipynb), is the compilation of all the models used in this dataset compiled by SPARSH ANALYTICS.
 ![image](https://github.com/user-attachments/assets/3922a244-13a2-49b6-b8dc-16affcf8b505)
 
-# References
-**Huge credits to:** 
+# 🔗References
+**Huge credits to:😎** 
 * [Engr. Mikko De Torres](https://github.com/MikkoDT)
 * [SPARSH ANALYTICS](https://github.com/Bang2018)
