@@ -32,9 +32,16 @@ The target variable indicates whether the individual was diagnosed with diabetes
 
 # 🔧Project Objectives
 
-1. **Predictive Modeling**: Utilize linear regression to predict house prices and logistic regression for diabetes diagnosis, demonstrating the application of statistical methods.
-2. **Data Analysis**: Investigate relationships between key variables in both datasets to understand factors influencing health and economic outcomes.
-3. **Model Evaluation**: Assess the effectiveness of various regression techniques in different contexts, fostering skills in model selection and validation.
-4. **Interdisciplinary Insights**: Explore how data-driven approaches can inform decision-making across healthcare and real estate sectors.
+### Regression Analysis Objectives
 
-This framework provides a broad perspective applicable to various fields.
+**Goal:** Develop regression models to predict outcomes, whether continuous or categorical, through Linear and Logistic Regression.
+
+1. **Data Preparation:** Clean and preprocess the dataset by handling missing values, outliers, and necessary encoding or normalization to ensure data quality and model readiness.
+  
+2. **Model Implementation:** Utilize libraries (e.g., Scikit-learn) to build and configure models, adapting parameters to optimize performance for both continuous and categorical predictions.
+
+3. **Evaluation and Metrics:** Use metrics such as R-squared, Mean Squared Error, and accuracy, alongside tools like confusion matrices, to assess model accuracy and reliability.
+
+4. **Interpretation:** Analyze model coefficients to understand feature importance, predict outcomes, and draw insights from the model’s predictive strength and classification ability. 
+
+Together, these objectives aim to create robust and interpretable models that address practical prediction and classification tasks.
