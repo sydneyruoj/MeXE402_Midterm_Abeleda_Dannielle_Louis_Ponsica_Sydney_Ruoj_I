@@ -14,7 +14,7 @@ The **Boston House Prices** dataset contains information about various factors i
 
 You can explore it further [here](https://www.kaggle.com/datasets/vikrishnan/boston-house-prices).
 
-### Logistic Regression Dataset
+### [Logistic Regression Dataset](https://github.com/sydneyruoj/MeXE402_Midterm_Abeleda_Dannielle_Louis_Ponsica_Sydney_Ruoj_I/tree/main/Logistic%20Regression)
 The Pima Indians Diabetes Database contains data collected from 768 women of Pima Indian heritage, focusing on attributes related to diabetes risk. The dataset includes 8 features:
 
 - Number of pregnancies
@@ -45,3 +45,7 @@ The target variable indicates whether the individual was diagnosed with diabetes
 4. **Interpretation:** Analyze model coefficients to understand feature importance, predict outcomes, and draw insights from the model’s predictive strength and classification ability. 
 
 Together, these objectives aim to create robust and interpretable models that address practical prediction and classification tasks.
+
+# ReadME/s
+* [Linear Regression Dataset](https://github.com/sydneyruoj/MeXE402_Midterm_Abeleda_Dannielle_Louis_Ponsica_Sydney_Ruoj_I/tree/main/Linear%20Regression)
+* [Logistic Regression Dataset](https://github.com/sydneyruoj/MeXE402_Midterm_Abeleda_Dannielle_Louis_Ponsica_Sydney_Ruoj_I/tree/main/Logistic%20Regression)
