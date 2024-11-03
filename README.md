@@ -9,7 +9,7 @@
 
 # 📒Dataset Description
 
-### Linear Regression Dataset
+### [Linear Regression Dataset](https://github.com/sydneyruoj/MeXE402_Midterm_Abeleda_Dannielle_Louis_Ponsica_Sydney_Ruoj_I/tree/main/Linear%20Regression)
 The **Boston House Prices** dataset contains information about various factors influencing housing prices in Boston suburbs, collected by the U.S. Census Service. It includes 506 observations with 13 features, such as the average number of rooms, crime rate, accessibility to highways, and more, all used to predict the median value of homes. This dataset is commonly used in linear regression analysis to understand how these factors impact housing prices.
 
 You can explore it further [here](https://www.kaggle.com/datasets/vikrishnan/boston-house-prices).
