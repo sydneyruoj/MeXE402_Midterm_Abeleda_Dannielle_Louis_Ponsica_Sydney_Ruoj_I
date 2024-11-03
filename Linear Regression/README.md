@@ -24,3 +24,8 @@
 *  A positive coefficient indicates that as the corresponding predictor variable increases, the response variable is expected to increase.
 *  The intercept and coefficients give us valuable insights into how each predictor affects the response variable. To really evaluate the model's accuracy and the importance of each predictor, it's crucial to look at their statistical significance along with the coefficients.
   
+## Reference
+### Linear Regression Dataset
+The **Boston House Prices** dataset contains information about various factors influencing housing prices in Boston suburbs, collected by the U.S. Census Service. It includes 506 observations with 13 features, such as the average number of rooms, crime rate, accessibility to highways, and more, all used to predict the median value of homes. This dataset is commonly used in linear regression analysis to understand how these factors impact housing prices.
+
+You can explore it further [here](https://www.kaggle.com/datasets/vikrishnan/boston-house-prices).
